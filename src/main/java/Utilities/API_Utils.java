@@ -1,8 +1,6 @@
 package Utilities;
 
 import io.restassured.RestAssured;
-import io.restassured.config.EncoderConfig;
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
@@ -45,7 +43,7 @@ public class API_Utils {
 //        return token;
 //    }
 
-    public static Response postRequest(String endpoint, String formdata) {
+    public static Response postRequest(String endpoint,String formdata) {
         request = RestAssured.given();
         request.header("Content-type", "application/json");
         request.body(formdata);

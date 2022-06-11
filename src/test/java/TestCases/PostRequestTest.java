@@ -55,7 +55,7 @@ public class PostRequestTest {
 //            System.out.println("after endpoint"+end_point);
             String body = Files.readString(Path.of(System.getProperty("user.dir") + "\\src\\test\\resources\\api_test_data\\CreateUserBody.json"), StandardCharsets.US_ASCII);
             System.out.println("body is="+body);
-            Response response = API_Utils.postRequest(endpoint, body);
+            Response response = API_Utils.postRequest(endpoint,body);
             System.out.println("after post method");
             Assert.assertEquals(response.getStatusCode(),201,"status code mismatch");
 
